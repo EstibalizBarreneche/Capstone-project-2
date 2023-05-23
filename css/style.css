@@ -1,20 +1,6 @@
 * {
   font-family: "IBM Plex Sans", sans-serif;
 }
-.grid-container {
-  display: grid;
-  /* height: 100vh; */
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto 1.25fr repeat(2, 0.75fr) 1.5fr auto;
-  grid-template-areas:
-    "header header"
-    "main main"
-    "section section"
-    "section1 section1"
-    "section2 section2"
-    "footer footer";
-  gap: 1rem;
-}
 
 .title {
   font-family: "Playfair Display SC", serif;
@@ -27,14 +13,8 @@
   color: #4b6587;
 }
 header {
-  grid-area: header;
-
   background-color: #f0f0f0;
   padding: 20px 0;
-}
-
-main {
-  grid-area: main;
 }
 
 .profile-container {
@@ -51,6 +31,7 @@ main {
 
 .icon-img {
   height: 40px;
+  opacity: 50%;
 }
 
 .lead {
@@ -67,9 +48,6 @@ main {
   font-weight: 700;
 }
 
-#my-resume {
-  grid-area: section;
-}
 .resume {
   display: flex;
   flex-wrap: wrap;
@@ -108,16 +86,12 @@ main {
   background-color: #f3c623;
   color: #f0f0f0;
 }
-#my-portfolio {
-  grid-area: section1;
-  grid-row: auto;
-}
+
 .img-portfolio {
   width: 400px;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
-
   flex-direction: column;
 }
 
@@ -131,22 +105,19 @@ main {
   text-decoration: none;
   color: #6e6d6d;
 }
-#contact-me {
-  grid-area: section2;
-}
 
 .contact-card {
+  display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 500px;
 }
 
 .message {
   display: block;
-  flex-direction: column;
-  justify-content: center;
-
+  border: solid rgb(212, 175, 55) 1px;
   padding: 10px;
-  width: 500px;
+  
 }
 label {
   display: block;
@@ -162,3 +133,36 @@ label {
 .container {
   grid-area: footer;
 }
+@media (min-width: 768px) {
+  .grid-container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1.25fr repeat(2, 0.75fr) 1.5fr auto;
+    grid-template-areas:
+      "header header"
+      "main main"
+      "section section"
+      "section1 section1"
+      "section2 section2"
+      "footer footer";
+    gap: 1rem;
+  }
+  header {
+    grid-area: header;
+  }
+  main {
+    grid-area: main;
+  }
+
+  #my-resume {
+    grid-area: section;
+  }
+  #my-portfolio {
+    grid-area: section1;
+  }
+  #contact-me {
+    grid-area: section2;
+  }
+}
+
