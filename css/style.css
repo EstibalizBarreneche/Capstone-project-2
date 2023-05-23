@@ -1,0 +1,164 @@
+* {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.grid-container {
+  display: grid;
+  /* height: 100vh; */
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto 1.25fr repeat(2, 0.75fr) 1.5fr auto;
+  grid-template-areas:
+    "header header"
+    "main main"
+    "section section"
+    "section1 section1"
+    "section2 section2"
+    "footer footer";
+  gap: 1rem;
+}
+
+.title {
+  font-family: "Playfair Display SC", serif;
+  letter-spacing: 0.5rem;
+  color: #4b6587;
+  padding: 1rem;
+}
+.navbar-brand {
+  font-family: "Playfair Display SC", serif;
+  color: #4b6587;
+}
+header {
+  grid-area: header;
+
+  background-color: #f0f0f0;
+  padding: 20px 0;
+}
+
+main {
+  grid-area: main;
+}
+
+.profile-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.decor-1 {
+  position: absolute;
+  opacity: 25%;
+  z-index: -1;
+}
+
+.icon-img {
+  height: 40px;
+}
+
+.lead {
+  text-align: justify;
+  font-weight: 400;
+  padding: 1rem;
+}
+.profile-photo {
+  border-radius: 25%;
+  filter: drop-shadow(5px 5px 10px #6e6d6d);
+}
+
+#navbarsExample04 {
+  font-weight: 700;
+}
+
+#my-resume {
+  grid-area: section;
+}
+.resume {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.resume-text {
+  width: 400px;
+  margin-left: 10px;
+}
+.resume-img {
+  margin-top: 15px;
+}
+
+.screenshot-resume {
+  width: 400px;
+  height: 200px;
+  border-radius: 10%;
+  border: solid rgba(78, 76, 76, 0.018);
+  padding: 10px;
+}
+.button,
+.input > input {
+  background-color: rgb(212, 175, 55);
+  padding: 0.75rem 0.375rem;
+  border: none;
+  border-radius: 30px;
+}
+
+.text-button {
+  text-decoration: none;
+  color: #4b6587;
+  font-weight: 700;
+}
+.button:hover,
+.text-button:hover {
+  background-color: #f3c623;
+  color: #f0f0f0;
+}
+#my-portfolio {
+  grid-area: section1;
+  grid-row: auto;
+}
+.img-portfolio {
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+
+  flex-direction: column;
+}
+
+.gif {
+  height: 350px;
+  width: 250px;
+}
+.a-gif {
+  font-weight: 300;
+  font-size: small;
+  text-decoration: none;
+  color: #6e6d6d;
+}
+#contact-me {
+  grid-area: section2;
+}
+
+.contact-card {
+  flex-direction: column;
+  width: 500px;
+}
+
+.message {
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 10px;
+  width: 500px;
+}
+label {
+  display: block;
+}
+#fname,
+#lname,
+#email {
+  padding-right: 100px;
+}
+.input {
+  display: block;
+}
+.container {
+  grid-area: footer;
+}
